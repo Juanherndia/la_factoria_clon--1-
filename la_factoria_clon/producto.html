@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Producto - La Factoría</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">La Factoría</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="#">Servicios</a>
+      <a href="#">Acerca de</a>
+      <a href="#">Contacto</a>
+      <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="producto-individual">
+    <div class="imagen">
+      <img src="assets/img/caja1.jpg" alt="Producto individual">
+    </div>
+    <div class="detalle">
+      <h1>Nombre del producto</h1>
+      <p class="precio">$25,00</p>
+      <p>Presenta de qué se trata este producto. ¿De qué está hecho? ¿Cómo se hizo? ¿Qué formas se puede disfrutar?</p>
+      <label for="cantidad">Cantidad:</label>
+      <input id="cantidad" type="number" value="1" min="1" />
+      <button onclick="addToCart('Nombre del producto', 25)">Añadir al carrito</button>
+    </div>
+  </main>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

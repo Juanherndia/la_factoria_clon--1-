@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compra - La Factoría</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">La Factoría</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="#">Servicios</a>
+      <a href="#">Acerca de</a>
+      <a href="#">Contacto</a>
+      <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="carrito">
+    <h2>Carrito de compra</h2>
+    <div id="cart-items"></div>
+    <div class="total">
+      <h3>Total: $<span id="total-price">0</span></h3>
+      <button onclick="finalizarCompra()">Área de Pago</button>
+    </div>
+  </main>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
