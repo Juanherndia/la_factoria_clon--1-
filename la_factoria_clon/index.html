@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Factoría</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- NAVBAR FIJA -->
@@ -14,130 +15,275 @@
         <a href="tienda.html">Tienda</a>
         <a href="#servicios">Descuentos</a>
         <a href="login.html">Mi cuenta</a>
-        <a href="#contacto">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
         <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
       </nav>
     </header>
 
-  <section class="hero">
-    <h1>Descubre el poder del diseño transformador</h1>
-  </section>
+    <!-- Carrusel -->
+    <section class="hero2">
+      <!-- carrusel1 -->
+      <div class="carrusel-container">
+        <div class="carrusel">
+          <div class="cinta">
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/1.png" alt="Carrusel 1"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/2.png" alt="Carrusel 2"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/3.png" alt="Carrusel 3"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/4.png" alt="Carrusel 4"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/5.png" alt="Carrusel 5"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/6.png" alt="Carrusel 6"
+            /></a>
+            <!-- duplicación -->
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/1_1.png" alt="Carrusel 1b"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/2_1.png" alt="Carrusel 2b"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/3_1.png" alt="Carrusel 3b"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/4_1.png" alt="Carrusel 4b"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/5_1.png" alt="Carrusel 5b"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/6_1.png" alt="Carrusel 6b"
+            /></a>
+          </div>
+        </div>
+      </div>
 
+      <!-- carrusel2 -->
+      <div class="carrusel2-container">
+        <div class="carrusel2">
+          <div class="cinta2">
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/7.png" alt="Carrusel 7"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/8.png" alt="Carrusel 8"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/9.png" alt="Carrusel 9"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/10.png" alt="Carrusel 10"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/7_1.png" alt="Carrusel 7b"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/8_1.png" alt="Carrusel 8b"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/9_1.png" alt="Carrusel 9b"
+            /></a>
+            <!-- duplicación -->
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/7.png" alt="Carrusel 7"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/8.png" alt="Carrusel 8"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/9.png" alt="Carrusel 9"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/10.png" alt="Carrusel 10"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/7_1.png" alt="Carrusel 7b"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/8_1.png" alt="Carrusel 8b"
+            /></a>
+            <a href="#"
+              ><img src="imagenes/imagenes_zopo/9_1.png" alt="Carrusel 9b"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
       <section class="productos-destacados destacados" id="productos">
         <h2>Productos destacados</h2>
         <div class="destacados productos">
-          <div
-            class="producto"
-            onclick="addToCart('Caja de Herramientas Perfecta', 25)"
-          >
+          <!-- Cambios: cada producto es un enlace a la página de producto -->
+          <a class="producto" href="producto.html?producto=1">
             <div class="img">
               <img
-                src="../imagenes_zopo/zopo_vertical_002.jpg"
-                alt="Caja de Herramientas Perfecta"
+                src="imagenes/imagenes_zopo/10.png"
+                alt="Bazo de Decoracion"
               />
+              <div class="overlay">
+                Producto artesanal único. Calidad y diseño exclusivo.<br />
+                <span style="font-size: 0.9em; font-weight: normal"
+                  >Caja de Herramientas Perfecta</span
+                >
+              </div>
             </div>
             <h3>Caja de Herramientas Perfecta</h3>
             <p>25 €</p>
-          </div>
-          <div class="producto" onclick="addToCart('Arte en Madera', 25)">
+          </a>
+          <a class="producto" href="producto.html?producto=2">
             <div class="img">
-              <img
-                src="../imagenes_zopo/zopo_vertical_005.jpg"
-                alt="Arte en Madera"
-              />
+              <img src="imagenes/imagenes_zopo/9_1.png" alt="Arte en Madera" />
+              <div class="overlay">
+                Hecho a mano con madera seleccionada.<br />
+                <span style="font-size: 0.9em; font-weight: normal"
+                  >Arte en Madera</span
+                >
+              </div>
             </div>
             <h3>Arte en Madera</h3>
             <p>25 €</p>
-          </div>
-          <div class="producto" onclick="addToCart('Creatividad Visual', 25)">
+          </a>
+          <a class="producto" href="producto.html?producto=3">
             <div class="img">
               <img
-                src="../imagenes_zopo/zopo_vertical_006.jpg"
+                src="imagenes/imagenes_zopo/7_1.png"
                 alt="Creatividad Visual"
               />
+              <div class="overlay">
+                Dale vida a tus ideas con creatividad.<br />
+                <span style="font-size: 0.9em; font-weight: normal"
+                  >Creatividad Visual</span
+                >
+              </div>
             </div>
             <h3>Creatividad Visual</h3>
             <p>25 €</p>
-          </div>
+          </a>
         </div>
         <button>VER TODO</button>
       </section>
 
       <section class="servicios" id="servicios">
-        <h2>Nuestros servicios</h2>
+        <h2>Descuentos</h2>
         <div class="cards">
-          <div>
+          <!-- Tarjeta 1 -->
+          <div class="card">
             <div class="img">
-              <img
-                src="../imagenes_zopo/zopo_vertical_003.jpg"
-                alt="Kit de Herramientas Creativas"
-              />
+              <img src="imagenes/descuentos/des_1.png" alt="Vaso Artesanal" />
             </div>
-            <h3>Kit de Herramientas Creativas</h3>
-            <p>99 €</p>
-            <p>
-              Descubre todo lo que necesitas para liberar tu potencial
-              creativo...
-            </p>
+            <h3>Tazon Artesanal</h3>
+            <div class="precios">
+              <span class="descuento">-20%</span>
+              <span class="precio-actual">39.900</span>
+            </div>
+            <button class="btn-comprar">Comprar ahora</button>
           </div>
-          <div>
+
+          <!-- Tarjeta 2 -->
+          <div class="card">
             <div class="img">
-              <img
-                src="../imagenes_zopo/zopo_vertical_008.jpg"
-                alt="Taller de Madera Artesanal"
-              />
+              <img src="imagenes/descuentos/des_2.png" alt="Vaso Artesanal" />
             </div>
-            <h3>Taller de Madera Artesanal</h3>
-            <p>149 €</p>
-            <p>Descubre la belleza del diseño en madera hecho a mano...</p>
+            <h3>Gorro tejido a mano</h3>
+            <div class="precios">
+              <span class="descuento">-20%</span>
+              <span class="precio-actual">39.900</span>
+            </div>
+            <button class="btn-comprar">Comprar ahora</button>
           </div>
-          <div>
+
+          <!-- Tarjeta 3 -->
+          <div class="card">
             <div class="img">
-              <img
-                src="../imagenes_zopo/zopo_vertical_009.jpg"
-                alt="Creativos en Acción"
-              />
+              <img src="imagenes/descuentos/des_3.png" alt="Vaso Artesanal" />
             </div>
-            <h3>Creativos en Acción</h3>
-            <p>199 €</p>
-            <p>Tenemos un equipo apasionado por darle vida a tus ideas...</p>
+            <h3>Oso de Peluche</h3>
+            <div class="precios">
+              <span class="descuento">-20%</span>
+              <span class="precio-actual">39.900</span>
+            </div>
+            <button class="btn-comprar">Comprar ahora</button>
           </div>
         </div>
       </section>
 
-      <section class="acerca" id="acerca">
-        <div class="img">
+      <!-- 5. Sobre nosotros -->
+      <section id="nosotros" class="seccion madera">
+        <div class="containerNosotros">
           <img
-            src="../imagenes_zopo/zopo_horizontal_001.jpg"
-            alt="Sobre nuestra marca"
+            src="imagenes/imagenNosotros/carro.png"
+            id="imagen"
+            alt="Imagen animada"
           />
-        </div>
-        <div>
-          <h2>Más sobre nuestra marca</h2>
-          <p>
-            En nuestro estudio, creemos en el poder transformador del buen
-            diseño...
-          </p>
+          <div id="marco">
+            <img
+              src="imagenes/imagenNosotros/marco.png"
+              id="imagen-marco"
+              alt="Marco decorativo"
+            />
+            <div id="cuadro">
+              <h2>Sobre nosotros</h2>
+              <p>
+                En La Factoria Artesanal, ubicada en Sopo, trabajamos para
+                llevar los mejores productos del campo y la ciudad a todos los
+                hogares. Con atención cálida y precios justos, hacemos del
+                mercado una experiencia para todos.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="redes">
         <h2>Síguenos en las redes sociales</h2>
-        <div class="galeria">
-          <div class="img">
-            <img src="../imagenes_zopo/zopo_horizontal_004.jpg" alt="Red 1" />
-          </div>
-          <div class="img">
-            <img src="../imagenes_zopo/zopo_horizontal_013.jpg" alt="Red 2" />
-          </div>
-          <div class="img">
-            <img src="../imagenes_zopo/zopo_horizontal_018.jpg" alt="Red 3" />
-          </div>
-          <div class="img">
-            <img src="../imagenes_zopo/zopo_horizontal_019.jpg" alt="Red 4" />
-          </div>
+        <div class="galeria redes-sociales">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="red-social facebook"
+            title="Facebook"
+          >
+            <img src="imagenes/logo_redes/facebook.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="red-social instagram"
+            title="Instagram"
+          >
+            <img src="imagenes/logo_redes/insta.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            class="red-social linkedin"
+            title="LinkedIn"
+          >
+            <img src="imagenes/logo_redes/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a
+            href="https://wa.me/573001234567"
+            target="_blank"
+            class="red-social whatsapp"
+            title="WhatsApp"
+          >
+            <img src="imagenes/logo_redes/whats.png" alt="WhatsApp" />
+          </a>
         </div>
-        <button>REDES SOCIALES</button>
+        <button class="btn-redes">
+          <span></span><span></span><span></span><span></span>
+          ¡Síguenos!
+        </button>
       </section>
 
       <section class="contacto" id="contacto">

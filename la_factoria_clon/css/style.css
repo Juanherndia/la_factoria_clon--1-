@@ -1,10 +1,6 @@
 body {
   font-family: Arial, sans-serif;
   background: #f1f1f1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
 }
 
@@ -66,4 +62,185 @@ button:hover {
 
 .link-registro a:hover {
   text-decoration: underline;
+}
+
+/* --- Redes sociales con botones únicos y vistosos (ajustado tamaño y estética) --- */
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 30px 0;
+}
+
+.red-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.13);
+  transition: transform 0.22s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.22s;
+  overflow: hidden;
+  border: 2px solid #e0c7a0;
+  position: relative;
+}
+
+.red-social img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  transition: transform 0.22s cubic-bezier(0.4, 2, 0.6, 1), filter 0.22s;
+  filter: grayscale(30%) brightness(0.95);
+}
+
+.red-social.facebook:hover {
+  background: #1877f3;
+  border-color: #1877f3;
+}
+.red-social.instagram:hover {
+  background: radial-gradient(
+    circle at 30% 110%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  border-color: #d6249f;
+}
+.red-social.linkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+}
+.red-social.whatsapp:hover {
+  background: #25d366;
+  border-color: #25d366;
+}
+.red-social:hover img {
+  transform: scale(1.22) rotate(-8deg);
+  filter: none;
+}
+.red-social::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(166, 124, 82, 0.18);
+  transition: box-shadow 0.22s;
+}
+.red-social:hover::after {
+  box-shadow: 0 0 0 6px rgba(166, 124, 82, 0.1);
+}
+
+/* Botón animado de redes */
+.btn-redes {
+  width: 220px;
+  height: 60px;
+  background: linear-gradient(to left top, #a67c52 60%, #e0c7a0 100%);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  margin: 30px auto 0 auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(44, 44, 44, 0.18);
+  transition: all 0.4s;
+}
+.btn-redes span {
+  position: absolute;
+  display: block;
+}
+.btn-redes span:nth-child(1) {
+  height: 3px;
+  width: 220px;
+  top: 0;
+  left: -220px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #fffbe6);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  animation: span1 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes span1 {
+  0% {
+    left: -220px;
+  }
+  100% {
+    left: 220px;
+  }
+}
+.btn-redes span:nth-child(2) {
+  height: 60px;
+  width: 3px;
+  top: -60px;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #fffbe6);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  animation: span2 2s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes span2 {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+.btn-redes span:nth-child(3) {
+  height: 3px;
+  width: 220px;
+  right: -220px;
+  bottom: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), #fffbe6);
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  animation: span3 2s linear infinite;
+  animation-delay: 3s;
+}
+@keyframes span3 {
+  0% {
+    right: -220px;
+  }
+  100% {
+    right: 220px;
+  }
+}
+.btn-redes span:nth-child(4) {
+  height: 60px;
+  width: 3px;
+  bottom: -60px;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), #fffbe6);
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  animation: span4 2s linear infinite;
+  animation-delay: 4s;
+}
+@keyframes span4 {
+  0% {
+    bottom: -60px;
+  }
+  100% {
+    bottom: 60px;
+  }
+}
+.btn-redes:hover {
+  transform: rotate(-2deg) scale(1.06);
+  box-shadow: 0px 4px 12px rgba(44, 44, 44, 0.22);
+}
+.btn-redes:hover span {
+  animation-play-state: paused;
 }

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "category": "jarrones",
+    "image": "imagenes/imagenes_zopo/1.png",
+    "name": "Jarrón Uno",
+    "price": 50000,
+    "description": "Decoración para tu hogar."
+  },
+  {
+    "id": 2,
+    "category": "jarrones",
+    "image": "imagenes/imagenes_zopo/1_1.png",
+    "name": "Jarrón Uno (Variante)",
+    "price": 52000,
+    "description": "Decoración para tu hogar, variante."
+  },
+  {
+    "id": 3,
+    "category": "bolsos",
+    "image": "imagenes/imagenes_zopo/2.png",
+    "name": "Bolso Dos",
+    "price": 54000,
+    "description": "Hecho a mano."
+  },
+  {
+    "id": 4,
+    "category": "bolsos",
+    "image": "imagenes/imagenes_zopo/2_1.png",
+    "name": "Bolso Dos (Variante)",
+    "price": 56000,
+    "description": "Hecho a mano, variante."
+  },
+  {
+    "id": 5,
+    "category": "artesanias",
+    "image": "imagenes/imagenes_zopo/3.png",
+    "name": "Artesanía Tres",
+    "price": 58000,
+    "description": "Hecha en madera."
+  },
+  {
+    "id": 6,
+    "category": "artesanias",
+    "image": "imagenes/imagenes_zopo/3_1.png",
+    "name": "Artesanía Tres (Variante)",
+    "price": 60000,
+    "description": "Hecha en madera, variante."
+  },
+  {
+    "id": 7,
+    "category": "decoracion",
+    "image": "imagenes/imagenes_zopo/4.png",
+    "name": "Decoración Cuatro",
+    "price": 62000,
+    "description": "Haz más lindo tu hogar."
+  },
+  {
+    "id": 8,
+    "category": "decoracion",
+    "image": "imagenes/imagenes_zopo/4_1.png",
+    "name": "Decoración Cuatro (Variante)",
+    "price": 64000,
+    "description": "Haz más lindo tu hogar, variante."
+  },
+  {
+    "id": 9,
+    "category": "accesorios",
+    "image": "imagenes/imagenes_zopo/5.png",
+    "name": "Accesorio Cinco",
+    "price": 66000,
+    "description": "Hecho a mano en plata y metales preciosos."
+  },
+  {
+    "id": 10,
+    "category": "accesorios",
+    "image": "imagenes/imagenes_zopo/5_1.png",
+    "name": "Accesorio Cinco (Variante)",
+    "price": 68000,
+    "description": "Hecho a mano en plata y metales preciosos, variante."
+  },
+  {
+    "id": 11,
+    "category": "accesorios",
+    "image": "imagenes/imagenes_zopo/5_11.png",
+    "name": "Accesorio Cinco (Edición Especial)",
+    "price": 70000,
+    "description": "Edición especial en plata y metales preciosos."
+  },
+  {
+    "id": 12,
+    "category": "joyas",
+    "image": "imagenes/imagenes_zopo/6.png",
+    "name": "Joya Uno",
+    "price": 72000,
+    "description": "Contrapruebas."
+  },
+  {
+    "id": 13,
+    "category": "joyas",
+    "image": "imagenes/imagenes_zopo/6_1.png",
+    "name": "Joya Uno (Variante)",
+    "price": 74000,
+    "description": "Contrapruebas, variante."
+  },
+  {
+    "id": 14,
+    "category": "cuadros",
+    "image": "imagenes/imagenes_zopo/7.png",
+    "name": "Cuadro Dos",
+    "price": 76000,
+    "description": "Pruebas."
+  },
+  {
+    "id": 15,
+    "category": "cuadros",
+    "image": "imagenes/imagenes_zopo/7_1.png",
+    "name": "Cuadro Dos (Variante)",
+    "price": 78000,
+    "description": "Pruebas, variante."
+  },
+  {
+    "id": 16,
+    "category": "varios",
+    "image": "imagenes/imagenes_zopo/8.png",
+    "name": "Varios Tres",
+    "price": 80000,
+    "description": "Repruebas."
+  },
+  {
+    "id": 17,
+    "category": "varios",
+    "image": "imagenes/imagenes_zopo/8_1.png",
+    "name": "Varios Tres (Variante)",
+    "price": 82000,
+    "description": "Repruebas, variante."
+  },
+  {
+    "id": 18,
+    "category": "tejidos",
+    "image": "imagenes/imagenes_zopo/9.png",
+    "name": "Tejido Cuatro",
+    "price": 84000,
+    "description": "Hecho a mano con lana de oveja y teñida con pigmentos naturales."
+  },
+  {
+    "id": 19,
+    "category": "tejidos",
+    "image": "imagenes/imagenes_zopo/9_1.png",
+    "name": "Tejido Cuatro (Variante)",
+    "price": 86000,
+    "description": "Hecho a mano con lana de oveja y teñida con pigmentos naturales, variante."
+  },
+  {
+    "id": 20,
+    "category": "joyas",
+    "image": "imagenes/imagenes_zopo/10.png",
+    "name": "Joya Especial",
+    "price": 88000,
+    "description": "Joya especial de la colección."
+  }
+]

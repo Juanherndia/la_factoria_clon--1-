@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de Compra - La Factoría</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/css_carrito.css" />
   </head>
   <body>
     <header>
-      <div class="logo">La Factoría</div>
+      <div class="logo">
+        <img
+          src="imagenes/logo_redes/logo.png"
+          alt="Logo La Factoría"
+          style="
+            height: 40px;
+            vertical-align: middle;
+            border-radius: 8px;
+            margin-right: 10px;
+          "
+        />
+        La Factoría
+      </div>
       <nav>
         <a href="index.html">Inicio</a>
         <a href="tienda.html">Tienda</a>
-        <a href="index.html#se">
         <a href="login.html">Mi Cuenta</a>
         <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
       </nav>
@@ -20,11 +32,23 @@
 
     <main class="carrito">
       <h2>Carrito de compra</h2>
-      <div id="cart-items"></div>
-      <div class="total">
-        <h3>Total: $<span id="total-price">0</span></h3>
-        <button onclick="finalizarCompra()">Área de Pago</button>
+      <div id="cart-items">
+        <!-- Los productos reales se generan dinámicamente con JS -->
       </div>
+      <div class="total">
+        <h3>Total: €<span id="total-price">0</span></h3>
+        <button class="btn-pago" onclick="mostrarOpcionesPago()">
+          Área de Pago
+        </button>
+        <div id="opciones-pago" class="modal">
+          <div class="modal-content">
+            <h3>Elige tu método de pago</h3>
+            <button onclick="elegirMetodo('Visa')">Visa</button>
+            <button onclick="elegirMetodo('Mastercard')">Mastercard</button>
+            <button onclick="elegirMetodo('Nequi')">Nequi</button>
+            <button onclick="cerrarOpcionesPago()">Cancelar</button>
+          </div>
+        </div>
     </main>
 
     <script src="js/scripts.js"></script>

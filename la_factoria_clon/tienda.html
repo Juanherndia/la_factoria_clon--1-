@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda - La Factoría</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tienda.css" />
   </head>
   <body>
     <header>
@@ -12,8 +13,8 @@
       <nav>
         <a href="index.html">Inicio</a>
         <a href="tienda.html">Tienda</a>
-        <a href="index.html#serivicos">Servicios</a>
-        <a href="login.html">Mi Cuenta</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#acerca">Acerca de</a>
         <a href="index.html#contacto">Contacto</a>
         <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
       </nav>
@@ -21,58 +22,31 @@
 
     <main class="tienda">
       <h2>Catálogo de productos</h2>
-      <div class="grid-productos">
-        <div class="producto" onclick="window.location.href='producto.html'">
-          <img
-            src="../imagenes_zopo/zopo_vertical_002.jpg"
-            alt="Caja de Herramientas Perfecta"
-          />
-          <h3>Caja de Herramientas Perfecta</h3>
-          <p>25 €</p>
-        </div>
-        <div class="producto" onclick="window.location.href='producto.html'">
-          <img
-            src="../imagenes_zopo/zopo_vertical_005.jpg"
-            alt="Arte en Madera"
-          />
-          <h3>Arte en Madera</h3>
-          <p>25 €</p>
-        </div>
-        <div class="producto" onclick="window.location.href='producto.html'">
-          <img
-            src="../imagenes_zopo/zopo_vertical_006.jpg"
-            alt="Creatividad Visual"
-          />
-          <h3>Creatividad Visual</h3>
-          <p>25 €</p>
-        </div>
-        <div class="producto" onclick="window.location.href='producto.html'">
-          <img
-            src="../imagenes_zopo/zopo_vertical_003.jpg"
-            alt="Kit de Herramientas Creativas"
-          />
-          <h3>Kit de Herramientas Creativas</h3>
-          <p>99 €</p>
-        </div>
-        <div class="producto" onclick="window.location.href='producto.html'">
-          <img
-            src="../imagenes_zopo/zopo_vertical_008.jpg"
-            alt="Taller de Madera Artesanal"
-          />
-          <h3>Taller de Madera Artesanal</h3>
-          <p>149 €</p>
-        </div>
-        <div class="producto" onclick="window.location.href='producto.html'">
-          <img
-            src="../imagenes_zopo/zopo_vertical_009.jpg"
-            alt="Creativos en Acción"
-          />
-          <h3>Creativos en Acción</h3>
-          <p>199 €</p>
-        </div>
+      <div class="grid-productos" id="grid-productos">
+        <!-- Los productos se cargarán automáticamente desde productos.json -->
       </div>
     </main>
 
     <script src="js/scripts.js"></script>
+    <script>
+      // Cargar productos desde productos.json y mostrarlos en la tienda
+      fetch("productos.json")
+        .then((response) => response.json())
+        .then((productos) => {
+          const grid = document.getElementById("grid-productos");
+          grid.innerHTML = "";
+          productos.forEach((prod) => {
+            const a = document.createElement("a");
+            a.className = "producto";
+            a.href = `producto.html?producto=${prod.id}`;
+            a.innerHTML = `
+              <img src="${prod.image}" alt="${prod.name}" />
+              <h3>${prod.name}</h3>
+              <p>$${prod.price.toLocaleString("es-CO")} COP</p>
+            `;
+            grid.appendChild(a);
+          });
+        });
+    </script>
   </body>
 </html>
