@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Factoria Artesanal - Tu Mercado de Confianza</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR SUPERIOR -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo La Factoria Artesanal" />
+        <div class="factoria" onclick="window.location.href='index.html'">
+          La Factoria Artesanal
+        </div>
+      </div>
+      <nav class="nav-links">
+        <div class="menu-right">
+          <div class="menu-icon notificaciones">
+            <img src="img/icono_notificacion.png" alt="Notificaciones" />
+            <span>Notificaciones</span>
+          </div>
+          <div class="menu-icon cuenta">
+            <img src="img/icono_cuenta.png" alt="Mi cuenta" />
+            <span>Mi cuenta</span>
+          </div>
+          <div class="menu-icon carrito">
+            <img src="img/icono_carrito.png" alt="Carrito" />
+            <span>Carrito</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- SUB NAVBAR ENLACES -->
+    <div class="sub-navbar">
+      <ul class="sub-menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Lo mas Vendido</a></li>
+        <li><a href="index.html#descuentos">Descuentos</a></li>
+        <li><a href="index.html#nosotros">Sobre Nosotros</a></li>
+        <li><a href="index.html#categorias">Categorias</a></li>
+        <li><a href="index.html#productos">Productos</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      <input type="email" id="email" placeholder="Correo" />
+      <input type="password" id="password" placeholder="Contraseña" />
+      <button onclick="iniciarSesion()">Iniciar Sesion</button>
+      <p id="mensaje"></p>
+      <p class="link-registro">
+        ¿Aún no tienes cuenta? <a href="registro.html">Regístrate</a>
+      </p>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="scriptLogin.js"></script>
+  </body>
+</html>
