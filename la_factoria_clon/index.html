@@ -1,109 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>La Factoría</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">La Factoría</div>
-    <nav>
-      <a href="tienda.html">Tienda</a>
-      <a href="#">Servicios</a>
-      <a href="#">Acerca de</a>
-      <a href="#">Contacto</a>
-      <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Factoría</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR FIJA -->
+    <header class="navbar-fija">
+      <div class="logo">La Factoría</div>
+      <nav>
+        <a href="tienda.html">Tienda</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#acerca">Acerca de</a>
+        <a href="#contacto">Contacto</a>
+        <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
+      </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Descubre el poder del diseño transformador</h1>
-  </section>
+    <main>
+      <section class="hero">
+        <h1>Descubre el poder del diseño transformador</h1>
+      </section>
 
-  <section class="productos-destacados destacados">
-    <h2>Productos destacados</h2>
-    <div class="destacados productos">
-      <div class="producto" onclick="addToCart('Caja de Herramientas Perfecta', 25)">
-        <div class="img"><img src="assets/img/herramienta.jpg" alt="Producto 1"></div>
-        <h3>Caja de Herramientas Perfecta</h3>
-        <p>25 €</p>
-      </div>
-      <div class="producto" onclick="addToCart('Arte en Madera', 25)">
-        <div class="img"><img src="assets/img/madera.jpg" alt="Producto 2"></div>
-        <h3>Arte en Madera</h3>
-        <p>25 €</p>
-      </div>
-      <div class="producto" onclick="addToCart('Creatividad Visual', 25)">
-        <div class="img"><img src="assets/img/visual.jpg" alt="Producto 3"></div>
-        <h3>Creatividad Visual</h3>
-        <p>25 €</p>
-      </div>
-    </div>
-    <button>VER TODO</button>
-  </section>
+      <section class="productos-destacados destacados" id="productos">
+        <h2>Productos destacados</h2>
+        <div class="destacados productos">
+          <div
+            class="producto"
+            onclick="addToCart('Caja de Herramientas Perfecta', 25)"
+          >
+            <div class="img">
+              <img src="assets/img/herramienta.jpg" alt="Producto 1" />
+            </div>
+            <h3>Caja de Herramientas Perfecta</h3>
+            <p>25 €</p>
+          </div>
+          <div class="producto" onclick="addToCart('Arte en Madera', 25)">
+            <div class="img">
+              <img src="assets/img/madera.jpg" alt="Producto 2" />
+            </div>
+            <h3>Arte en Madera</h3>
+            <p>25 €</p>
+          </div>
+          <div class="producto" onclick="addToCart('Creatividad Visual', 25)">
+            <div class="img">
+              <img src="assets/img/visual.jpg" alt="Producto 3" />
+            </div>
+            <h3>Creatividad Visual</h3>
+            <p>25 €</p>
+          </div>
+        </div>
+        <button>VER TODO</button>
+      </section>
 
-  <section class="servicios">
-    <h2>Nuestros servicios</h2>
-    <div class="cards">
-      <div>
+      <section class="servicios" id="servicios">
+        <h2>Nuestros servicios</h2>
+        <div class="cards">
+          <div>
+            <div class="img"></div>
+            <h3>Kit de Herramientas Creativas</h3>
+            <p>99 €</p>
+            <p>
+              Descubre todo lo que necesitas para liberar tu potencial
+              creativo...
+            </p>
+          </div>
+          <div>
+            <div class="img"></div>
+            <h3>Taller de Madera Artesanal</h3>
+            <p>149 €</p>
+            <p>Descubre la belleza del diseño en madera hecho a mano...</p>
+          </div>
+          <div>
+            <div class="img"></div>
+            <h3>Creativos en Acción</h3>
+            <p>199 €</p>
+            <p>Tenemos un equipo apasionado por darle vida a tus ideas...</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="acerca" id="acerca">
         <div class="img"></div>
-        <h3>Kit de Herramientas Creativas</h3>
-        <p>99 €</p>
-        <p>Descubre todo lo que necesitas para liberar tu potencial creativo...</p>
-      </div>
-      <div>
-        <div class="img"></div>
-        <h3>Taller de Madera Artesanal</h3>
-        <p>149 €</p>
-        <p>Descubre la belleza del diseño en madera hecho a mano...</p>
-      </div>
-      <div>
-        <div class="img"></div>
-        <h3>Creativos en Acción</h3>
-        <p>199 €</p>
-        <p>Tenemos un equipo apasionado por darle vida a tus ideas...</p>
-      </div>
-    </div>
-  </section>
+        <div>
+          <h2>Más sobre nuestra marca</h2>
+          <p>
+            En nuestro estudio, creemos en el poder transformador del buen
+            diseño...
+          </p>
+        </div>
+      </section>
 
-  <section class="acerca">
-    <div class="img"></div>
-    <div>
-      <h2>Más sobre nuestra marca</h2>
-      <p>En nuestro estudio, creemos en el poder transformador del buen diseño...</p>
-    </div>
-  </section>
+      <section class="redes">
+        <h2>Síguenos en las redes sociales</h2>
+        <div class="galeria">
+          <div class="img"></div>
+          <div class="img"></div>
+          <div class="img"></div>
+          <div class="img"></div>
+        </div>
+        <button>REDES SOCIALES</button>
+      </section>
 
-  <section class="redes">
-    <h2>Síguenos en las redes sociales</h2>
-    <div class="galeria">
-      <div class="img"></div>
-      <div class="img"></div>
-      <div class="img"></div>
-      <div class="img"></div>
-    </div>
-    <button>REDES SOCIALES</button>
-  </section>
+      <section class="contacto" id="contacto">
+        <h2>Contáctanos</h2>
+        <form>
+          <div>
+            <input placeholder="Nombre" />
+            <input placeholder="Apellidos" />
+          </div>
+          <input placeholder="Correo electrónico" />
+          <textarea placeholder="Mensaje"></textarea>
+          <button>ENVIAR</button>
+        </form>
+      </section>
+    </main>
 
-  <section class="contacto">
-    <h2>Contáctanos</h2>
-    <form>
-      <div>
-        <input placeholder="Nombre"/>
-        <input placeholder="Apellidos"/>
-      </div>
-      <input placeholder="Correo electrónico"/>
-      <textarea placeholder="Mensaje"></textarea>
-      <button>ENVIAR</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>La Factoría</p>
-    <p>Hecho con Squarespace</p>
-  </footer>
-  <script src="js/scripts.js"></script>
-</body>
+    <footer>
+      <p>La Factoría</p>
+      <p>Hecho con Squarespace</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
