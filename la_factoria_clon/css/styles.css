@@ -35,13 +35,13 @@ nav a {
 }
 .hero {
   height: 100vh;
-  background: #000 url("../imagenes_zopo/zopo_horizontal_001.jpg") no-repeat
-    center/cover;
+  background: #000 url("../assets/img/hero.jpg") no-repeat center/cover;
   color: #f0dfce;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 10px;
 }
 .destacados,
 .servicios,
@@ -115,23 +115,4 @@ footer {
   padding: 20px;
   background-color: #f0dfce;
   font-size: 0.9em;
-}
-@media (max-width: 900px) {
-  .productos,
-  .cards,
-  .galeria,
-  .grid-productos {
-    flex-direction: column;
-    align-items: center;
-  }
-  .producto,
-  .cards div,
-  .galeria .img,
-  .grid-productos .producto {
-    width: 90%;
-  }
-  .acerca {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
