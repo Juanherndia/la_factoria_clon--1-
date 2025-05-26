@@ -1,40 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tienda - La Factoría</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">La Factoría</div>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="tienda.html">Tienda</a>
-      <a href="#">Servicios</a>
-      <a href="#">Acerca de</a>
-      <a href="#">Contacto</a>
-      <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda - La Factoría</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">La Factoría</div>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#acerca">Acerca de</a>
+        <a href="#contacto">Contacto</a>
+        <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
+      </nav>
+    </header>
 
-  <main class="tienda">
-    <h2>Catálogo de productos</h2>
-    <div class="grid-productos">
-      <div class="producto" onclick="window.location.href='producto.html'">
-        <img src="assets/img/caja1.jpg" alt="Producto 1">
-        <h3>Nombre del producto</h3>
-        <p>$25,00</p>
+    <main class="tienda">
+      <h2>Catálogo de productos</h2>
+      <div class="grid-productos">
+        <div class="producto" onclick="window.location.href='producto.html'">
+          <img
+            src="../imagenes_zopo/zopo_vertical_002.jpg"
+            alt="Caja de Herramientas Perfecta"
+          />
+          <h3>Caja de Herramientas Perfecta</h3>
+          <p>25 €</p>
+        </div>
+        <div class="producto" onclick="window.location.href='producto.html'">
+          <img
+            src="../imagenes_zopo/zopo_vertical_005.jpg"
+            alt="Arte en Madera"
+          />
+          <h3>Arte en Madera</h3>
+          <p>25 €</p>
+        </div>
+        <div class="producto" onclick="window.location.href='producto.html'">
+          <img
+            src="../imagenes_zopo/zopo_vertical_006.jpg"
+            alt="Creatividad Visual"
+          />
+          <h3>Creatividad Visual</h3>
+          <p>25 €</p>
+        </div>
+        <div class="producto" onclick="window.location.href='producto.html'">
+          <img
+            src="../imagenes_zopo/zopo_vertical_003.jpg"
+            alt="Kit de Herramientas Creativas"
+          />
+          <h3>Kit de Herramientas Creativas</h3>
+          <p>99 €</p>
+        </div>
+        <div class="producto" onclick="window.location.href='producto.html'">
+          <img
+            src="../imagenes_zopo/zopo_vertical_008.jpg"
+            alt="Taller de Madera Artesanal"
+          />
+          <h3>Taller de Madera Artesanal</h3>
+          <p>149 €</p>
+        </div>
+        <div class="producto" onclick="window.location.href='producto.html'">
+          <img
+            src="../imagenes_zopo/zopo_vertical_009.jpg"
+            alt="Creativos en Acción"
+          />
+          <h3>Creativos en Acción</h3>
+          <p>199 €</p>
+        </div>
       </div>
-      <div class="producto" onclick="window.location.href='producto.html'">
-        <img src="assets/img/caja2.jpg" alt="Producto 2">
-        <h3>Nombre del producto</h3>
-        <p>$25,00</p>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <script src="js/scripts.js"></script>
-</body>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>

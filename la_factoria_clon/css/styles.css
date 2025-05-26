@@ -4,13 +4,30 @@ body {
   background-color: #f0dfce;
   color: #2d2d2d;
 }
-header {
+header,
+.navbar-fija {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #f0dfce;
 }
+
+/* Header fijo */
+.navbar-fija {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Para que el contenido no quede oculto debajo del header fijo */
+main {
+  padding-top: 90px;
+}
+
 nav a {
   margin-left: 20px;
   text-decoration: none;
@@ -18,32 +35,56 @@ nav a {
 }
 .hero {
   height: 100vh;
-  background: #000 url('../assets/img/hero.jpg') no-repeat center/cover;
+  background: #000 url("../imagenes_zopo/zopo_horizontal_001.jpg") no-repeat
+    center/cover;
   color: #f0dfce;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.destacados, .servicios, .acerca, .redes, .contacto {
+.destacados,
+.servicios,
+.acerca,
+.redes,
+.contacto {
   padding: 60px 40px;
 }
-.productos, .cards, .galeria {
+.productos,
+.cards,
+.galeria,
+.grid-productos {
   display: flex;
   justify-content: space-around;
   gap: 30px;
+  flex-wrap: wrap;
 }
-.producto, .cards div, .galeria .img {
+.producto,
+.cards div,
+.galeria .img,
+.grid-productos .producto {
   width: 30%;
   background: white;
   border-radius: 10px;
   overflow: hidden;
   padding: 1rem;
   box-sizing: border-box;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
 }
-.producto img {
+.producto:hover,
+.cards div:hover,
+.grid-productos .producto:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+.producto img,
+.cards div img,
+.galeria .img img,
+.grid-productos .producto img {
   width: 100%;
-  border-radius: 50%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 .img {
   background-color: #ddd;
@@ -53,6 +94,12 @@ nav a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .acerca {
   display: flex;
@@ -68,4 +115,23 @@ footer {
   padding: 20px;
   background-color: #f0dfce;
   font-size: 0.9em;
+}
+@media (max-width: 900px) {
+  .productos,
+  .cards,
+  .galeria,
+  .grid-productos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .producto,
+  .cards div,
+  .galeria .img,
+  .grid-productos .producto {
+    width: 90%;
+  }
+  .acerca {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
