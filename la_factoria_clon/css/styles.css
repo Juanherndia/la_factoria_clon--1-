@@ -4,6 +4,9 @@ body {
   background-color: #f0dfce;
   color: #2d2d2d;
 }
+header nav {
+  margin-right: 70px;
+}
 header,
 .navbar-fija {
   display: flex;
