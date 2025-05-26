@@ -75,3 +75,30 @@
     height: 120px;
   }
 }
+.buscador {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.buscador input {
+  padding: 0.5em;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  width: 250px;
+  font-size: 1em;
+}
+
+.buscador button {
+  padding: 0.5em;
+  background-color: #38697c;
+  border: none;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.buscador button:hover {
+  background-color: #1f3a45;
+}

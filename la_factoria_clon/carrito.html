@@ -40,13 +40,16 @@
         <button class="btn-pago" onclick="mostrarOpcionesPago()">
           Área de Pago
         </button>
-        <div id="opciones-pago" class="modal">
+        <div id="modal" class="modal">
           <div class="modal-content">
-            <h3>Elige tu método de pago</h3>
-            <button onclick="elegirMetodo('Visa')">Visa</button>
-            <button onclick="elegirMetodo('Mastercard')">Mastercard</button>
-            <button onclick="elegirMetodo('Nequi')">Nequi</button>
-            <button onclick="cerrarOpcionesPago()">Cancelar</button>
+            <div id="opcionesPago">
+              <h3>Elige tu método de pago</h3>
+              <button onclick="elegirMetodo('Visa')">Visa 💳</button>
+              <button onclick="elegirMetodo('Mastercard')">Mastercard 💳</button>
+              <button onclick="elegirMetodo('Nequi')">Nequi 📱</button>
+              <button onclick="cerrarOpcionesPago()">Cancelar</button>
+            </div>
+            <div id="contenidoPago"></div>
           </div>
         </div>
     </main>

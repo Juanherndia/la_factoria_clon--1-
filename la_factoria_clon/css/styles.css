@@ -140,15 +140,15 @@ nav a {
   gap: 40px;
 }
 
-/* Formu */
+/* Form */
 form {
   width: 60%;
-  height: 250px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding: 25px;
-  background: #ffffff;
+  background: #b99566;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 50px auto;
@@ -178,12 +178,12 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-  border-color: #0066cc;
+  border-color: rgb(204, 156, 101);
 }
 
 form button {
   padding: 12px;
-  background-color: #38697c;
+  background-color: #745d3f;
   color: white;
   border: none;
   border-radius: 8px;
@@ -195,7 +195,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #004d99;
+  background-color: #a08158;
 }
 
 footer {
@@ -450,7 +450,7 @@ footer {
 }
 
 .btn-comprar {
-  background-color: #ff9900;
+  background-color: #7a5c36 60%;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -461,7 +461,7 @@ footer {
 }
 
 .btn-comprar:hover {
-  background-color: #e68a00;
+  background-color: #7a5c36 60%;
 }
 
 /* ------------------- NUEVO: PRODUCTO INDIVIDUAL ------------------- */

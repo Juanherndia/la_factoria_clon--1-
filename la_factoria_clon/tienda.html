@@ -19,14 +19,16 @@
         <a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a>
       </nav>
     </header>
-
+    <section class="buscador">
+      <input type="text" id="buscar" placeholder="Buscar productos..." />
+      <button onclick="buscarProductos()">Buscar</button>
+    </section>
     <main class="tienda">
       <h2>Catálogo de productos</h2>
       <div class="grid-productos" id="grid-productos">
         <!-- Los productos se cargarán automáticamente desde productos.json -->
       </div>
     </main>
-
     <script src="js/scripts.js"></script>
     <script>
       // Cargar productos desde productos.json y mostrarlos en la tienda
@@ -39,6 +41,7 @@
             const a = document.createElement("a");
             a.className = "producto";
             a.href = `producto.html?producto=${prod.id}`;
+            a.setAttribute("data-category", prod.category || "");
             a.innerHTML = `
               <img src="${prod.image}" alt="${prod.name}" />
               <h3>${prod.name}</h3>

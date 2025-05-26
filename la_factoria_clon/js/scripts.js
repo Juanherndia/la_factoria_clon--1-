@@ -1,5 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+document.getElementById("buscar").addEventListener("input", buscarProductos);
 function addToCart(nombre, precio, cantidad = 1) {
   cantidad = parseInt(cantidad) || 1;
   const item = cart.find((p) => p.nombre === nombre);
@@ -169,17 +169,129 @@ function cargarProductoIndividual() {
   }
 }
 function mostrarOpcionesPago() {
-  document.getElementById("opciones-pago").style.display = "flex";
+  document.getElementById("modal").style.display = "flex";
 }
 
 function cerrarOpcionesPago() {
-  document.getElementById("opciones-pago").style.display = "none";
+  document.getElementById("modal").style.display = "none";
 }
 
 function elegirMetodo(metodo) {
   alert("Has elegido pagar con " + metodo);
   cerrarOpcionesPago();
-  // Si quieres, puedes redirigir o abrir otro formulario aquí
+}
+function mostrarOpcionesPago() {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("opcionesPago").style.display = "block";
+  document.getElementById("contenidoPago").innerHTML = "";
+}
+
+// Cerrar modal y limpiar contenido
+function cerrarModal() {
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("contenidoPago").innerHTML = "";
+}
+
+// Elegir método de pago y mostrar formulario correspondiente
+function elegirMetodo(metodo) {
+  document.getElementById("opcionesPago").style.display = "none";
+  mostrarFormularioPago(metodo);
+}
+
+// Mostrar formulario de pago según método
+function mostrarFormularioPago(metodo) {
+  const contenedor = document.getElementById("contenidoPago");
+  let formularioHTML = "";
+
+  if (metodo === "Nequi") {
+    formularioHTML = `
+  <h3>Pago con Nequi</h3>
+  <label for="nequiTelefono">Número de celular:</label>
+  <input type="tel" id="nequiTelefono" placeholder="3001234567" required />
+  
+  <button onclick="procesarPago('${metodo}')">Pagar</button>
+  <button onclick="mostrarOpcionesPago()">Cancelar</button>
+`;
+  } else {
+    formularioHTML = `
+    <h3>Pago con ${metodo}</h3>
+    <label for="nombreTarjeta">Nombre del Titular:</label>
+    <input type="text" id="nombreTarjeta" required />
+    
+    <label for="numeroTarjeta">Número de tarjeta:</label>
+    <input type="text" id="numeroTarjeta" maxlength="16" required />
+    
+    <label for="fechaVencimiento">Fecha de vencimiento:</label>
+    <input type="month" id="fechaVencimiento" required />
+    
+    <label for="cvc">CVC:</label>
+    <input type="text" id="cvc" maxlength="4" required />
+    
+    <button onclick="procesarPago('${metodo}')">Pagar</button>
+    <button onclick="mostrarOpcionesPago()">Cancelar</button>
+  `;
+  }
+
+  contenedor.innerHTML = formularioHTML;
+}
+
+// Procesar pago con validación simple
+function procesarPago(metodo) {
+  if (metodo === "Nequi") {
+    const telefono = document.getElementById("nequiTelefono").value.trim();
+    const regexTelefono = /^[0-9]{10}$/;
+
+    if (!regexTelefono.test(telefono)) {
+      alert("Por favor, ingresa un número de celular válido (10 dígitos).");
+      return;
+    }
+  } else {
+    const nombre = document.getElementById("nombreTarjeta").value.trim();
+    const numero = document.getElementById("numeroTarjeta").value.trim();
+    const vencimiento = document
+      .getElementById("fechaVencimiento")
+      .value.trim();
+    const cvc = document.getElementById("cvc").value.trim();
+
+    if (!nombre || !numero || !vencimiento || !cvc) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    if (!/^[0-9]{16}$/.test(numero)) {
+      alert("El número de tarjeta debe tener 16 dígitos.");
+      return;
+    }
+
+    if (!/^[0-9]{3,4}$/.test(cvc)) {
+      alert("El CVC debe tener 3 o 4 dígitos.");
+      return;
+    }
+  }
+
+  alert(`Has pagado con ${metodo}. Gracias por tu compra.`);
+  cart = [];
+  localStorage.removeItem("cart");
+  renderCart();
+  cerrarModal();
+}
+function buscarProductos() {
+  const input = document.getElementById("buscar");
+  const filtro = input.value.trim().toLowerCase();
+  const productos = document.querySelectorAll(".producto");
+
+  productos.forEach((producto) => {
+    const nombre = producto.querySelector("h3").textContent.toLowerCase();
+    const categoria = (
+      producto.getAttribute("data-category") || ""
+    ).toLowerCase();
+
+    if (nombre.includes(filtro) || categoria.includes(filtro)) {
+      producto.style.display = "";
+    } else {
+      producto.style.display = "none";
+    }
+  });
 }
 
 // Opcional: mensaje visual al añadir al carrito

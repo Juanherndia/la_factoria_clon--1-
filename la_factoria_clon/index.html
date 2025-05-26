@@ -138,7 +138,7 @@
               </div>
             </div>
             <h3>Caja de Herramientas Perfecta</h3>
-            <p>25 €</p>
+            <p>20.000$</p>
           </a>
           <a class="producto" href="producto.html?producto=2">
             <div class="img">
@@ -151,7 +151,7 @@
               </div>
             </div>
             <h3>Arte en Madera</h3>
-            <p>25 €</p>
+            <p>25.000$</p>
           </a>
           <a class="producto" href="producto.html?producto=3">
             <div class="img">
@@ -167,7 +167,7 @@
               </div>
             </div>
             <h3>Creatividad Visual</h3>
-            <p>25 €</p>
+            <p>40.000$</p>
           </a>
         </div>
         <button>VER TODO</button>
@@ -300,10 +300,116 @@
       </section>
     </main>
 
-    <footer>
-      <p>La Factoría</p>
-      <p>Hecho con Squarespace</p>
+    <!-- Widget de accesibilidad -->
+    <div
+      class="accesibilidad-widget"
+      aria-label="Herramientas de accesibilidad"
+    >
+      <button id="aumentar-texto" title="Aumentar tamaño de texto">A+</button>
+      <button id="disminuir-texto" title="Disminuir tamaño de texto">A-</button>
+      <button id="resetear-texto" title="Restablecer tamaño de texto">A</button>
+    </div>
+
+    <!-- Footer innovador -->
+    <footer class="footer-innovador">
+      <!-- 1. Frase inspiradora o lema de la marca -->
+      <div class="footer-lema">
+        <blockquote>
+          <span
+            >“Transformando lo cotidiano en arte, apoyando sueños
+            locales.”</span
+          >
+        </blockquote>
+      </div>
+
+      <!-- 2. Newsletter creativa -->
+      <div class="footer-newsletter">
+        <form id="newsletter-form">
+          <label for="newsletter-email">Recibe inspiración y descuentos:</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+          <button type="submit">Suscribirme</button>
+        </form>
+        <div id="newsletter-msg" style="display: none">
+          ¡Gracias por unirte a la comunidad Factoría!
+        </div>
+      </div>
+
+      <!-- 3. Mapa interactivo o mini-mapa de Sopo -->
+      <div class="footer-mapa">
+        <iframe
+          title="Ubicación La Factoría Sopo"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-73.944%2C4.909%2C-73.930%2C4.919&amp;layer=mapnik"
+          style="
+            border: 1px solid #e0c7a0;
+            border-radius: 12px;
+            width: 100%;
+            height: 120px;
+          "
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <small>Sopó, Cundinamarca</small>
+      </div>
+
+      <!-- 5. Botón de WhatsApp o chat directo -->
+      <div class="footer-whatsapp">
+        <a
+          href="https://wa.me/573001234567"
+          target="_blank"
+          class="whatsapp-btn"
+          title="Chatea con nosotros por WhatsApp"
+        >
+          <img src="imagenes/logo_redes/whats.png" alt="WhatsApp" />
+          <span>¿Dudas? ¡Chatea aquí!</span>
+        </a>
+      </div>
+
+      <!-- 10. Contador de impacto -->
+      <div class="footer-impacto">
+        <span
+          >🌱 <strong>+500</strong> familias apoyadas gracias a tus
+          compras</span
+        >
+      </div>
+
+      <!-- 11. Selector de idioma y modo oscuro -->
+      <div class="footer-opciones">
+        <select id="selector-idioma" aria-label="Seleccionar idioma">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+        <button id="modo-oscuro" title="Activar/desactivar modo oscuro">
+          🌙
+        </button>
+      </div>
     </footer>
     <script src="js/scripts.js"></script>
+    <script src="js/accesibilidad.js"></script>
+    <script>
+      // Newsletter feedback
+      document.getElementById("newsletter-form").onsubmit = function (e) {
+        e.preventDefault();
+        document.getElementById("newsletter-msg").style.display = "block";
+        setTimeout(() => {
+          document.getElementById("newsletter-msg").style.display = "none";
+        }, 3500);
+        this.reset();
+      };
+
+      // Modo oscuro
+      document.getElementById("modo-oscuro").onclick = function () {
+        document.body.classList.toggle("dark-mode");
+      };
+
+      // Selector de idioma (solo cambia el idioma visualmente, ejemplo simple)
+      document.getElementById("selector-idioma").onchange = function () {
+        alert("Funcionalidad de cambio de idioma próximamente.");
+      };
+    </script>
   </body>
 </html>
