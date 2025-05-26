@@ -17,13 +17,10 @@ nav a {
   color: #2d2d2d;
 }
 .hero {
-  height: 100vh;
-  background: #000 url('../assets/img/hero.jpg') no-repeat center/cover;
-  color: #f0dfce;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 500px;
+  background: #d3bda1;
   text-align: center;
+  padding: 10px;
 }
 .destacados, .servicios, .acerca, .redes, .contacto {
   padding: 60px 40px;
@@ -68,4 +65,79 @@ footer {
   padding: 20px;
   background-color: #f0dfce;
   font-size: 0.9em;
+}
+
+/*Carruseles*/
+/*Carrusel 1*/
+.carrusel-container {
+  overflow: hidden;
+  padding: 8px 0;
+}
+
+.carrusel {
+  white-space: nowrap;
+}
+
+.cinta {
+  display: inline-flex;
+  animation: mover 60s linear infinite;
+  animation-direction: reverse;
+}
+
+.cinta a {
+  display: inline-block;
+}
+
+.cinta img {
+  padding: 10px;
+  background-color: #3f0808;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 480px;
+  height: 288px;
+  margin: 0 20px;
+  object-fit: cover;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/*Animaciones*/
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/*Carrusel 2*/
+.carrusel2-container {
+  overflow: hidden;
+  padding: 8px 0;
+}
+
+.carrusel2 {
+  white-space: nowrap;
+}
+
+.cinta2 {
+  display: inline-flex;
+  animation: mover 50s linear infinite;
+}
+
+.cinta2 a {
+  display: inline-block;
+}
+
+.cinta2 img {
+  padding: 7px;
+  background-color: #3f0808;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 240px;
+  height: 144px;
+  margin: 0 20px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
